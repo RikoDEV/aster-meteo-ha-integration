@@ -100,5 +100,22 @@ def _async_prune_stale_devices(hass: HomeAssistant, entry: AsterConfigEntry) -> 
 async def async_remove_config_entry_device(
     hass: HomeAssistant, entry: AsterConfigEntry, device_entry: dr.DeviceEntry
 ) -> bool:
-    """Allow deleting a device from the UI unless its station is still configured."""
-    return not _device_station_ids(device_entry) & _active_station_ids(entry)
+    """Let the user delete a station from its device page.
+
+    Deleting the device also removes the station (the subentry); otherwise the
+    next reload would simply create the device again. The subentry is removed on
+    the next loop iteration, after Home Assistant has finished detaching the
+    device from this entry.
+    """
+    stations = _device_station_ids(device_entry)
+
+    def _remove_station_subentries() -> None:
+        for subentry in list(entry.subentries.values()):
+            if (
+                subentry.subentry_type == SUBENTRY_STATION
+                and str(subentry.data[CONF_STATION_ID]) in stations
+            ):
+                hass.config_entries.async_remove_subentry(entry, subentry.subentry_id)
+
+    hass.loop.call_soon(_remove_station_subentries)
+    return True

@@ -55,7 +55,8 @@ Puławy. Configured from the UI, installed with HACS, one device per station.
    **A-Ster.pl Meteo**, and enter the [station ID](#finding-your-station-id) (for example `428`), an optional name and the
    intervals.
 4. To add more stations, open the integration and press **Add meteo station**. The pencil beside a
-   station renames it or changes its intervals.
+   station changes its ID, name or intervals. To remove a station, use **⋮** → **Delete** beside it,
+   or **Delete** on its device page. A device can also be renamed and moved to an area there.
 
 [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=aster_meteo)
 

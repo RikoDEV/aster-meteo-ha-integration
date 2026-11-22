@@ -56,7 +56,8 @@ stację.
    **Dodaj integrację** → **A-Ster.pl Meteo** i podaj [numer stacji](#jak-znaleźć-numer-stacji) (na przykład `428`), opcjonalną nazwę oraz
    interwały.
 4. Aby dodać kolejne stacje, otwórz integrację i naciśnij **Dodaj stację meteo**. Ołówek obok stacji
-   pozwala zmienić jej nazwę lub interwały.
+   pozwala zmienić jej numer, nazwę lub interwały. Aby usunąć stację, użyj **⋮** → **Usuń** obok niej
+   albo **Usuń** na stronie urządzenia. Na stronie urządzenia można też zmienić jego nazwę i obszar.
 
 [![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=aster_meteo)
 
