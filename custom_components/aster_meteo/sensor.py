@@ -13,7 +13,6 @@ from homeassistant.components.sensor import (
     SensorStateClass,
 )
 from homeassistant.const import (
-    CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
     DEGREE,
     PERCENTAGE,
     EntityCategory,
@@ -169,7 +168,7 @@ SENSORS: tuple[AsterSensorDescription, ...] = (
         api_key="pm2Int",
         translation_key="pm25",
         device_class=SensorDeviceClass.PM25,
-        native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+        native_unit_of_measurement="µg/m³",
         state_class=SensorStateClass.MEASUREMENT,
     ),
     AsterSensorDescription(
@@ -177,7 +176,7 @@ SENSORS: tuple[AsterSensorDescription, ...] = (
         api_key="pm10Int",
         translation_key="pm10",
         device_class=SensorDeviceClass.PM10,
-        native_unit_of_measurement=CONCENTRATION_MICROGRAMS_PER_CUBIC_METER,
+        native_unit_of_measurement="µg/m³",
         state_class=SensorStateClass.MEASUREMENT,
     ),
     *(_soil(depth) for depth in (10, 20, 30, 40, 60, 100)),
