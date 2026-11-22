@@ -12,7 +12,7 @@
         },
         "data_description": {
           "station_id": "Numer stacji w sieci A-Ster.",
-          "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+          "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster\" z numerem stacji.",
           "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
           "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
         }
@@ -44,7 +44,7 @@
           },
           "data_description": {
             "station_id": "Numer stacji w sieci A-Ster.",
-            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster\" z numerem stacji.",
             "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
             "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
           }
@@ -59,7 +59,7 @@
           },
           "data_description": {
             "station_id": "Numer stacji w sieci A-Ster.",
-            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster\" z numerem stacji.",
             "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
             "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
           }

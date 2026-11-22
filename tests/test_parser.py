@@ -8,6 +8,7 @@ from __future__ import annotations
 from datetime import datetime
 import importlib.util
 from pathlib import Path
+import sys
 import unittest
 from zoneinfo import ZoneInfo
 
@@ -19,6 +20,8 @@ _spec = importlib.util.spec_from_file_location(
     "aster_parser", ROOT / "custom_components" / "aster_meteo" / "parser.py"
 )
 parser = importlib.util.module_from_spec(_spec)
+# dataclasses(slots=True) looks the module up in sys.modules while it is being created
+sys.modules[_spec.name] = parser
 _spec.loader.exec_module(parser)
 
 

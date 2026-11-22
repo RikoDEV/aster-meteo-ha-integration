@@ -12,7 +12,7 @@
         },
         "data_description": {
           "station_id": "Number of the station in the A-Ster network.",
-          "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+          "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty to use \"A-Ster\" followed by the station ID.",
           "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
           "max_age": "Hours without a fresh measurement after which the entities become unavailable."
         }
@@ -44,7 +44,7 @@
           },
           "data_description": {
             "station_id": "Number of the station in the A-Ster network.",
-            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty to use \"A-Ster\" followed by the station ID.",
             "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
             "max_age": "Hours without a fresh measurement after which the entities become unavailable."
           }
@@ -59,7 +59,7 @@
           },
           "data_description": {
             "station_id": "Number of the station in the A-Ster network.",
-            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty to use \"A-Ster\" followed by the station ID.",
             "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
             "max_age": "Hours without a fresh measurement after which the entities become unavailable."
           }

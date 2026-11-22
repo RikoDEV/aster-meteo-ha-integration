@@ -19,11 +19,13 @@ from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timedelta
 import importlib.util
 from pathlib import Path
+import sys
 import urllib.request
 
 PARSER = Path(__file__).resolve().parent.parent / "custom_components" / "aster_meteo" / "parser.py"
 spec = importlib.util.spec_from_file_location("aster_parser", PARSER)
 parser = importlib.util.module_from_spec(spec)
+sys.modules[spec.name] = parser
 spec.loader.exec_module(parser)
 
 BASE_URL = "http://meteor.iung.pulawy.pl/data2.php?s={}"
