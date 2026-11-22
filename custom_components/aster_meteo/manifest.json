@@ -1,10 +1,10 @@
 {
   "domain": "aster_meteo",
   "name": "A-Ster.pl Meteo",
-  "codeowners": [],
   "categories": [
     "weather_alerts"
   ],
+  "codeowners": [],
   "config_flow": true,
   "documentation": "https://github.com/RikoDEV/aster-meteo-ha-integration",
   "integration_type": "hub",
