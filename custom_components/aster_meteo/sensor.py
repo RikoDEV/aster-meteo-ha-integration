@@ -186,7 +186,7 @@ SENSORS: tuple[AsterSensorDescription, ...] = (
 def station_device_info(coordinator: AsterCoordinator) -> DeviceInfo:
     """Return the device of a station."""
     return DeviceInfo(
-        identifiers={(DOMAIN, coordinator.station_id)},
+        identifiers={(DOMAIN, coordinator.subentry_id)},
         name=coordinator.station_name,
         manufacturer=MANUFACTURER,
         model=MODEL,
@@ -260,7 +260,7 @@ class AsterSensor(AsterBaseEntity, SensorEntity):
         """Initialize the sensor."""
         super().__init__(coordinator)
         self.entity_description = description
-        self._attr_unique_id = f"{coordinator.station_id}_{description.api_key}"
+        self._attr_unique_id = f"{coordinator.subentry_id}_{description.api_key}"
 
     @property
     def available(self) -> bool:
@@ -292,7 +292,7 @@ class AsterLastUpdateSensor(AsterBaseEntity, SensorEntity):
     def __init__(self, coordinator: AsterCoordinator) -> None:
         """Initialize the sensor."""
         super().__init__(coordinator)
-        self._attr_unique_id = f"{coordinator.station_id}_last_update"
+        self._attr_unique_id = f"{coordinator.subentry_id}_last_update"
 
     @property
     def available(self) -> bool:

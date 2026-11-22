@@ -49,7 +49,7 @@ class AsterWeather(CoordinatorEntity[AsterCoordinator], WeatherEntity):
     def __init__(self, coordinator: AsterCoordinator) -> None:
         """Initialize the entity."""
         super().__init__(coordinator)
-        self._attr_unique_id = f"{coordinator.station_id}_weather"
+        self._attr_unique_id = f"{coordinator.subentry_id}_weather"
         self._attr_device_info = station_device_info(coordinator)
 
     @property

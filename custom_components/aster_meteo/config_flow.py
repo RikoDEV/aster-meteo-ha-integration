@@ -104,6 +104,7 @@ class AsterConfigFlow(ConfigFlow, domain=DOMAIN):
     """Create the server entry together with the first station."""
 
     VERSION = 1
+    MINOR_VERSION = 2
 
     @classmethod
     @callback
