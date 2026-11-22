@@ -17,7 +17,7 @@ stację.
 
 [![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RikoDEV&repository=aster-meteo-ha-integration&category=integration)
 
-[Szybki start](#szybki-start) · [Funkcje](#funkcje) · [Encje](#encje) · [Jak znaleźć numer stacji](#jak-znaleźć-numer-stacji) · [Migracja](#migracja-ze-starej-platformy-makow_weather) · [English](README.md)
+[Szybki start](#szybki-start) · [Funkcje](#funkcje) · [Encje](#encje) · [Jak znaleźć numer stacji](#jak-znaleźć-numer-stacji) · [English](README.md)
 
 </div>
 
@@ -124,14 +124,6 @@ prognozy nie ma.
 Identyfikatory encji wynikają z nazwy urządzenia i języka Home Assistant: stacja o nazwie
 `Maków Weather` daje `sensor.makow_weather_air_temperature` po angielsku albo
 `sensor.makow_weather_temperatura_powietrza` po polsku.
-
-## Migracja ze starej platformy `makow_weather`
-
-1. Zainstaluj tę integrację i dodaj stację `428` o nazwie **Maków Weather**.
-2. Usuń stary blok `sensor: - platform: makow_weather` oraz folder `custom_components/makow_weather`,
-   a następnie zrestartuj.
-3. Zaktualizuj pulpity i automatyzacje używające `sensor.makow_weather_*` do nowych identyfikatorów
-   encji; zobacz **Ustawienia** → **Encje**.
 
 ## Jak to działa
 

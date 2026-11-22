@@ -16,7 +16,7 @@ Puławy. Configured from the UI, installed with HACS, one device per station.
 
 [![Open your Home Assistant instance and open this repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=RikoDEV&repository=aster-meteo-ha-integration&category=integration)
 
-[Quick start](#quick-start) · [Features](#features) · [Entities](#entities) · [Finding your station ID](#finding-your-station-id) · [Migrating](#migrating-from-the-old-makow_weather-platform) · [Polski](README_pl.md)
+[Quick start](#quick-start) · [Features](#features) · [Entities](#entities) · [Finding your station ID](#finding-your-station-id) · [Polski](README_pl.md)
 
 </div>
 
@@ -123,14 +123,6 @@ forecast.
 Entity IDs follow the device name and your Home Assistant language: a station called
 `Maków Weather` becomes `sensor.makow_weather_air_temperature` in English or
 `sensor.makow_weather_temperatura_powietrza` in Polish.
-
-## Migrating from the old `makow_weather` platform
-
-1. Install this integration and add station `428` named **Maków Weather**.
-2. Remove the old `sensor: - platform: makow_weather` block and the `custom_components/makow_weather`
-   folder, then restart.
-3. Update dashboards and automations that used `sensor.makow_weather_*` to the new entity IDs; see
-   **Settings** → **Entities**.
 
 ## How it works
 
