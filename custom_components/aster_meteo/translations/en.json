@@ -1,0 +1,151 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "A-Ster.pl Meteo",
+        "description": "Add your first meteo station. You can add more stations later from the integration page. Station IDs are the numbers used by the A-Ster network (for example 428). To find the ID, open your station page on the A-Ster portal (e.g. view2.php?u=Ręczno), press F12 -> Network and look for the request data2.php?s=422 - the number after s= is the ID.",
+        "data": {
+          "station_id": "Station ID",
+          "name": "Name",
+          "scan_interval": "Update interval",
+          "max_age": "Mark as unavailable after"
+        },
+        "data_description": {
+          "station_id": "Number of the station in the A-Ster network.",
+          "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+          "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
+          "max_age": "Hours without a fresh measurement after which the entities become unavailable."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to the A-Ster server.",
+      "no_data": "The station did not return any readings. Check the station ID."
+    },
+    "abort": {
+      "already_configured": "The integration is already set up. Add more stations from the integration page."
+    }
+  },
+  "config_subentries": {
+    "station": {
+      "initiate_flow": {
+        "user": "Add meteo station",
+        "reconfigure": "Reconfigure meteo station"
+      },
+      "entry_type": "Meteo station",
+      "step": {
+        "user": {
+          "title": "Add meteo station",
+          "data": {
+            "station_id": "Station ID",
+            "name": "Name",
+            "scan_interval": "Update interval",
+            "max_age": "Mark as unavailable after"
+          },
+          "data_description": {
+            "station_id": "Number of the station in the A-Ster network.",
+            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+            "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
+            "max_age": "Hours without a fresh measurement after which the entities become unavailable."
+          }
+        },
+        "reconfigure": {
+          "title": "Reconfigure meteo station",
+          "data": {
+            "station_id": "Station ID",
+            "name": "Name",
+            "scan_interval": "Update interval",
+            "max_age": "Mark as unavailable after"
+          },
+          "data_description": {
+            "station_id": "Number of the station in the A-Ster network.",
+            "name": "Used as the device name, e.g. \"Maków Weather\". Leave empty for \"A-Ster <ID>\".",
+            "scan_interval": "How often the station is polled. Stations report every 10 minutes.",
+            "max_age": "Hours without a fresh measurement after which the entities become unavailable."
+          }
+        }
+      },
+      "error": {
+        "cannot_connect": "Cannot connect to the A-Ster server.",
+        "no_data": "The station did not return any readings. Check the station ID.",
+        "already_configured": "This station is already added."
+      },
+      "abort": {
+        "reconfigure_successful": "Re-configuration was successful"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "air_temperature": {
+        "name": "Air temperature"
+      },
+      "humidity": {
+        "name": "Humidity"
+      },
+      "pressure": {
+        "name": "Pressure"
+      },
+      "wind_speed": {
+        "name": "Wind speed"
+      },
+      "wind_direction": {
+        "name": "Wind direction"
+      },
+      "rain_today": {
+        "name": "Rain today"
+      },
+      "rain_yesterday": {
+        "name": "Rain yesterday"
+      },
+      "precipitation_type": {
+        "name": "Precipitation type",
+        "state": {
+          "none": "None",
+          "rain": "Rain",
+          "hail": "Hail",
+          "other": "Other"
+        }
+      },
+      "ground_temperature": {
+        "name": "Ground temperature"
+      },
+      "soil_temperature_10cm": {
+        "name": "Soil temperature 10 cm"
+      },
+      "leaf_wetness": {
+        "name": "Leaf wetness"
+      },
+      "sunshine_duration": {
+        "name": "Sunshine duration"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "soil_moisture_10cm": {
+        "name": "Soil moisture 10 cm"
+      },
+      "soil_moisture_20cm": {
+        "name": "Soil moisture 20 cm"
+      },
+      "soil_moisture_30cm": {
+        "name": "Soil moisture 30 cm"
+      },
+      "soil_moisture_40cm": {
+        "name": "Soil moisture 40 cm"
+      },
+      "soil_moisture_60cm": {
+        "name": "Soil moisture 60 cm"
+      },
+      "soil_moisture_100cm": {
+        "name": "Soil moisture 100 cm"
+      },
+      "last_update": {
+        "name": "Last measurement"
+      }
+    }
+  }
+}

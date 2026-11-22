@@ -1,0 +1,5 @@
+{ data: "1970-01-01 01:00", windDir: "", windSpeed: "", rainT: "", rainY: "", temperature: { label: "Temperatura", 
+color: "rgb(203, 75, 75)", data: [null] }, humidity: { label: "Wilgotno&#347;&#263;", color: "rgb(237, 194, 64)", data: 
+[null], yaxis: 2 }, t5Int: 5, tg10Int: "", leafInt: "", pm2Int: "", pm10Int: "", pressInt: "",
+ irr_durInt: "", temperatureInt: "", soil10: "", soil20: "", soil30: "",
+ soil40: "", soil60: "", soil100: "", Op_Typ: "", humidityInt: "" }

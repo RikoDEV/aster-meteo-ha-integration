@@ -1,0 +1,151 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "A-Ster.pl Meteo",
+        "description": "Dodaj pierwszą stację meteo. Kolejne stacje dodasz później na stronie integracji. Identyfikator stacji to numer używany w sieci A-Ster (np. 428). Aby znaleźć identyfikator, otwórz stronę stacji w portalu A-Ster (np. view2.php?u=Ręczno), naciśnij F12 -> Network i znajdź zapytanie data2.php?s=422 - liczba po s= to identyfikator.",
+        "data": {
+          "station_id": "Identyfikator stacji",
+          "name": "Nazwa",
+          "scan_interval": "Częstotliwość odświeżania",
+          "max_age": "Oznacz jako niedostępną po"
+        },
+        "data_description": {
+          "station_id": "Numer stacji w sieci A-Ster.",
+          "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+          "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
+          "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z serwerem A-Ster.",
+      "no_data": "Stacja nie zwróciła żadnych odczytów. Sprawdź identyfikator stacji."
+    },
+    "abort": {
+      "already_configured": "Integracja jest już skonfigurowana. Kolejne stacje dodaj na stronie integracji."
+    }
+  },
+  "config_subentries": {
+    "station": {
+      "initiate_flow": {
+        "user": "Dodaj stację meteo",
+        "reconfigure": "Zmień ustawienia stacji meteo"
+      },
+      "entry_type": "Stacja meteo",
+      "step": {
+        "user": {
+          "title": "Dodaj stację meteo",
+          "data": {
+            "station_id": "Identyfikator stacji",
+            "name": "Nazwa",
+            "scan_interval": "Częstotliwość odświeżania",
+            "max_age": "Oznacz jako niedostępną po"
+          },
+          "data_description": {
+            "station_id": "Numer stacji w sieci A-Ster.",
+            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+            "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
+            "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
+          }
+        },
+        "reconfigure": {
+          "title": "Zmień ustawienia stacji meteo",
+          "data": {
+            "station_id": "Identyfikator stacji",
+            "name": "Nazwa",
+            "scan_interval": "Częstotliwość odświeżania",
+            "max_age": "Oznacz jako niedostępną po"
+          },
+          "data_description": {
+            "station_id": "Numer stacji w sieci A-Ster.",
+            "name": "Nazwa urządzenia, np. \"Maków Weather\". Puste pole oznacza \"A-Ster <ID>\".",
+            "scan_interval": "Jak często pobierać dane ze stacji. Stacje raportują co 10 minut.",
+            "max_age": "Liczba godzin bez nowego pomiaru, po której encje stają się niedostępne."
+          }
+        }
+      },
+      "error": {
+        "cannot_connect": "Nie można połączyć się z serwerem A-Ster.",
+        "no_data": "Stacja nie zwróciła żadnych odczytów. Sprawdź identyfikator stacji.",
+        "already_configured": "Ta stacja jest już dodana."
+      },
+      "abort": {
+        "reconfigure_successful": "Ponowna konfiguracja zakończyła się pomyślnie"
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "air_temperature": {
+        "name": "Temperatura powietrza"
+      },
+      "humidity": {
+        "name": "Wilgotność"
+      },
+      "pressure": {
+        "name": "Ciśnienie"
+      },
+      "wind_speed": {
+        "name": "Prędkość wiatru"
+      },
+      "wind_direction": {
+        "name": "Kierunek wiatru"
+      },
+      "rain_today": {
+        "name": "Opady dziś"
+      },
+      "rain_yesterday": {
+        "name": "Opady wczoraj"
+      },
+      "precipitation_type": {
+        "name": "Rodzaj opadu",
+        "state": {
+          "none": "Brak",
+          "rain": "Deszcz",
+          "hail": "Grad",
+          "other": "Inny"
+        }
+      },
+      "ground_temperature": {
+        "name": "Temperatura przy gruncie"
+      },
+      "soil_temperature_10cm": {
+        "name": "Temperatura gleby 10 cm"
+      },
+      "leaf_wetness": {
+        "name": "Zwilżenie liści"
+      },
+      "sunshine_duration": {
+        "name": "Czas nasłonecznienia"
+      },
+      "pm25": {
+        "name": "PM2.5"
+      },
+      "pm10": {
+        "name": "PM10"
+      },
+      "soil_moisture_10cm": {
+        "name": "Wilgotność gleby 10 cm"
+      },
+      "soil_moisture_20cm": {
+        "name": "Wilgotność gleby 20 cm"
+      },
+      "soil_moisture_30cm": {
+        "name": "Wilgotność gleby 30 cm"
+      },
+      "soil_moisture_40cm": {
+        "name": "Wilgotność gleby 40 cm"
+      },
+      "soil_moisture_60cm": {
+        "name": "Wilgotność gleby 60 cm"
+      },
+      "soil_moisture_100cm": {
+        "name": "Wilgotność gleby 100 cm"
+      },
+      "last_update": {
+        "name": "Ostatni pomiar"
+      }
+    }
+  }
+}
